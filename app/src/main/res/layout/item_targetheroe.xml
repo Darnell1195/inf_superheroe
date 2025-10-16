@@ -26,37 +26,57 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_begin="156dp" />
 
-    <ImageView
-        android:id="@+id/img_photo"
-        android:layout_width="191dp"
-        android:layout_height="0dp"
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_hero"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        app:layout_constraintBottom_toTopOf="@id/guideline2"
+        android:layout_marginEnd="16dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/guideline"
-        app:srcCompat="@drawable/img_1"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintBottom_toTopOf="@id/guideline2">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:text="calico"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/img_photo"
-        app:layout_constraintTop_toTopOf="@id/guideline"
-        tools:layout_editor_absoluteY="15dp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="8dp">
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="14dp"
-        android:text="habitante de Electronic City"
-        app:layout_constraintStart_toEndOf="@+id/img_photo"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+            <ImageView
+                android:id="@+id/img_photo"
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:contentDescription="Foto del héroe"
+                app:srcCompat="@drawable/img_1" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginStart="12dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="calico"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="habitante de Electronic City" />
+            </LinearLayout>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+    ```
 
 </androidx.constraintlayout.widget.ConstraintLayout>
